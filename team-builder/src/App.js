@@ -24,7 +24,7 @@ function App() {
   function editMember(memberEdit) {
     const tempEdit = [...team];
     tempEdit[editIndex] = memberEdit;
-    setTeam((team[editIndex] = tempEdit));
+    setTeam(tempEdit);
     setIsEditing(false);
   }
 
