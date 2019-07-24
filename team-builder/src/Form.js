@@ -15,7 +15,11 @@ function Form(props) {
   function handleSubmit(event) {
     event.preventDefault();
     console.log("Member: ", member);
-    props.addMember(member);
+    if (props.isEditing) {
+      props.editMember(member);
+    } else {
+      props.addMember(member);
+    }
   }
 
   useEffect(() => {

@@ -7,7 +7,7 @@ function MemberCard(props) {
       <h2>Username: {props.member.username}</h2>
       <h4>Email: {props.member.email}</h4>
       <h4>Role: {props.member.role}</h4>
-      <button onClick={() => props.editButton(props.member)}>Edit</button>
+      <button onClick={() => props.createEditButton(props.member)}>Edit</button>
     </div>
   );
 }
