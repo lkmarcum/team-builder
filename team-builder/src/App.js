@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Form from "./Form";
+import MemberCard from "./MemberCard";
 import "./App.css";
 
 function App() {
@@ -16,6 +17,11 @@ function App() {
   return (
     <div className="App">
       <Form addMember={updateTeam} />
+      <div className="team-list">
+        {team.map(teamMember => (
+          <MemberCard teamMember={teamMember} />
+        ))}
+      </div>
     </div>
   );
 }
